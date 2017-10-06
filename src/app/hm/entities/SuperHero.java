@@ -1,14 +1,13 @@
 package app.hm.entities;
 
-import javax.persistence.CascadeType;
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Version;
@@ -28,28 +27,15 @@ public class SuperHero {
 	@Column(name = "alias", length=250)
 	private String alias;
 	
-	@Column(name = "nom", length=250)
-	private String nom;
-	
 	@Column(name = "version")
 	@Version
 	private Integer version;
 	
-	@OneToOne
+	@OneToOne()
 	private Caracteristique caracteristique;
 	
-
-	//Controller
-	public SuperHero(){
-		super();
-	}
+	@ManyToMany()
+	private List<Team> teams;
 	
-	//Custom Setters
-	public void setParking(Parking parking){
-		if(parking != null){
-			parking.getVoitures().add(this);
-		}
-		this.parking = parking;			
-	}
 	
 }

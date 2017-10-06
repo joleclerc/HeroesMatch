@@ -11,7 +11,7 @@ public class EntityManagerProvider {
 	private EntityManager em;
 	private EntityTransaction tran;
 	private static EntityManagerProvider INSTANCE;
-	private final String DB_PERSISTENCE = "ParkingVoiture";
+	private final String DB_PERSISTENCE = "HeroesMatch";
 		 
 	public static EntityManagerProvider getInstance(){	
 		if(INSTANCE == null)
