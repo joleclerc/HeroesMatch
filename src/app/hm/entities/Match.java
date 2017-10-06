@@ -16,12 +16,12 @@ import javax.persistence.Table;
 import lombok.Data;
 
 @Data
-@Table(name="match")
+@Table(name="teamMatch")
 @Entity
 public class Match {
 
 	@Id
-	@Column(name = "idParking")
+	@Column(name = "idMatch")
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer idMatch;
 	
@@ -34,5 +34,6 @@ public class Match {
 	private Team teamB;
 	
 	@Enumerated(EnumType.STRING)
+	@Column(name="terrainType")
 	private TerrainType terrainType;
 }

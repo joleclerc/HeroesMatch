@@ -1,0 +1,27 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+<!-- 	<constant name="struts.beanValidation.providerClass" value="org.hibernate.validator.HibernateValidator"/> -->
+<!--     <constant name="struts.beanValidation.ignoreXMLConfiguration" value="false"/> -->
+<!--     <constant name="struts.beanValidation.convertMessageToUtf" value="false"/> -->
+<!--     <constant name="struts.beanValidation.convertMessageFromEncoding" value="ISO-8859-1"/> -->
+    
+    <package name="default" extends="struts-default">
+<!-- 	    <interceptors> -->
+<!-- 	        <interceptor -->
+<!-- 	             name="beanValidation" -->
+<!-- 	             class="org.apache.struts.beanvalidation.validation.interceptor.BeanValidationInterceptor"/> -->
+	 
+<!-- 	        <interceptor-stack name="appDefaultStack"> -->
+<!-- 	            <interceptor-ref name="beanValidation"/> -->
+<!-- 	            <interceptor-ref name="defaultStack"/> -->
+<!-- 	        </interceptor-stack> -->
+<!-- 	    </interceptors> -->
+        <action name="SuperHeroController" class="app.hm.controllers.SuperHeroController">
+            <result name="SUCCESS">/superHero.jsp</result>
+        </action>
+    </package>
+</struts>
