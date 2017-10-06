@@ -22,6 +22,8 @@ public class Team {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer idTeam;
 	
+	private String nom;
+	
 	@ManyToMany(mappedBy="teams")
 	private List<SuperHero> superHeroes;
 	
